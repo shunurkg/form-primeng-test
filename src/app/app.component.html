@@ -3,7 +3,7 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
 <h2>Here are some links to help you start: </h2>
 <ul>
@@ -16,5 +16,39 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
 
+<form #form="ngForm" class="form">
+  <span class="ui-float-label">
+    <input id="float-input" type="text" size="30" name="uname" [(ngModel)]="sys.name" pInputText>
+    <label for="float-input">Name</label>
+  </span>
+  <br>
+    <div class="ageblock">
+      <span class="ui-float-label">
+        <input id="float-input" type="number" size="2" name="age" [(ngModel)]="sys.age" pInputText>
+        <label for="float-input">Age</label>
+      </span>
+    </div><br>
+    <div class="genderblock">
+      <label>Gender:&nbsp;</label>
+  
+      <p-radioButton name="groupname" value="male" label="Male" [(ngModel)]="sys.gender"></p-radioButton>
+      <p-radioButton name="groupname" value="female" label="Female" [(ngModel)]="sys.gender"></p-radioButton>
+    
+      </div>
+  <br>
+  <span class="ui-float-label">
+    <input id="float-input" type="email" size="30" name="email" [(ngModel)]="sys.email" pInputText>
+    <label for="float-input">E-mail</label>
+  </span>
+  <br>
+  <span class="ui-float-label">
+     <input id="float-input" type="text" name="cc" size="30" maxlength="10" [(ngModel)]="sys.phone" pInputText [pKeyFilter]="ccRegex">
+     <label for="float-input" >Phone</label>
+  </span>
+  <br>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle" width="425"></p-confirmDialog>
+
+<button type="text" class="float-right" (click)="confirm()" pButton icon="pi pi-check" label="Submit"></button>
+</form>
