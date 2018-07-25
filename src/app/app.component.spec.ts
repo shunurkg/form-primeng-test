@@ -12,8 +12,11 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 
 import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
+import { GrowlModule } from 'primeng/growl';
+import { CarouselModule } from 'primeng/carousel';
+import { CarouselComponent } from './carousel/carousel.component';
 
-describe('AppComponent', () => {
+fdescribe('AppComponent', () => {
 
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
@@ -28,7 +31,7 @@ describe('AppComponent', () => {
       //   FormsModule,RadioButtonModule,ConfirmDialogModule
       // ]
       declarations: [
-        AppComponent
+        AppComponent,CarouselComponent
       ],
       imports: [
         BrowserModule,
@@ -39,7 +42,9 @@ describe('AppComponent', () => {
         ConfirmDialogModule,
         KeyFilterModule,
         MessagesModule,
-        MessageModule
+        MessageModule,
+        GrowlModule,
+        CarouselModule
       ],
       providers: [ConfirmationService]
     }).compileComponents();

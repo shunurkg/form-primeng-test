@@ -10,7 +10,10 @@ import {ConfirmationService} from 'primeng/api';
 import {KeyFilterModule} from 'primeng/keyfilter';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
+import {CarouselModule} from 'primeng/carousel';
+import {GrowlModule} from 'primeng/growl';
 import { CarouselComponent } from './carousel/carousel.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     ConfirmDialogModule,
     KeyFilterModule,
     MessagesModule,
+    CarouselModule,
+  GrowlModule,
     MessageModule
   ],
   providers: [ConfirmationService],
