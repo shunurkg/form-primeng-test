@@ -10,6 +10,7 @@ name:'',age:'',gender:'',email:'',phone:''
 })
 export class AppComponent {
   title = 'primeng form';
+  
   ccRegex: RegExp = /[0-9]{10}}$/;
   sys=system; 
   constructor(private confirmationService: ConfirmationService) {}
