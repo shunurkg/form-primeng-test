@@ -18,18 +18,28 @@
   </li>
 </ul> -->
 <app-carousel></app-carousel>
+<div class="myClass">
 <form #form="ngForm" class="form">
   <span class="ui-float-label">
     <input id="float-input" type="text" size="30" name="uname" [(ngModel)]="sys.name" pInputText>
     <label for="float-input">Name</label>
   </span>
-  <br>
+  <br><br>
     <div class="ageblock">
       <span class="ui-float-label">
-        <input id="float-input" type="number" size="2" name="age" [(ngModel)]="sys.age" pInputText>
+        <input id="float-input" type="number" size="30" name="age" [(ngModel)]="sys.age" pInputText>
         <label for="float-input">Age</label>
       </span>
-    </div><br>
+    </div>
+    <br><br>
+<!-- inline calendar -->
+<div class="ui-g-12 ui-md-4">
+    <span class="ui-float-label">
+  <p-calendar [(ngModel)]="sys.dob" [monthNavigator]="true" [yearNavigator]="true" yearRange="1950:2020"></p-calendar>
+  <label for="float-input">DOB</label>
+  </span>
+</div><br>
+<br><br>
     <div class="genderblock">
       <label>Gender:&nbsp;</label>
   
@@ -37,19 +47,21 @@
       <p-radioButton name="groupname" value="female" label="Female" [(ngModel)]="sys.gender"></p-radioButton>
     
       </div>
-  <br>
+  <br><br>
   <span class="ui-float-label">
     <input id="float-input" type="email" size="30" name="email" [(ngModel)]="sys.email" pInputText>
     <label for="float-input">E-mail</label>
   </span>
-  <br>
+  <br><br>
   <span class="ui-float-label">
-     <input id="float-input" type="text" name="cc" size="30" maxlength="10" [(ngModel)]="sys.phone" pInputText [pKeyFilter]="ccRegex">
+     <!-- <input id="float-input" type="number" name="cc" size="30" maxlength="10" [(ngModel)]="sys.phone" pInputText [pKeyFilter]="ccRegex"> -->
+     <p-inputMask [(ngModel)]="sys.phone" mask="9999999999"></p-inputMask>
      <label for="float-input" >Phone</label>
   </span>
-  <br>
-<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle" width="425"></p-confirmDialog>
+  <br><br>
+  <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle" width="425"></p-confirmDialog>
 
 <button type="text" class="float-right" (click)="confirm()" pButton icon="pi pi-check" label="Submit"></button>
 </form>
+</div>
 

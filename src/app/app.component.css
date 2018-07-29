@@ -8,11 +8,15 @@
 }
 .ageblock{
     display: inline-block;
-    /* text-align-last: justify; */
+    /* text-align-last: justify;  */
 }
 .genderblock{
+    width:60%;
     display:inline-block;
 }
 .float-right{
     float: right;
+}
+.myClass{
+    text-align: justify
 }

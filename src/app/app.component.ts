@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ConfirmationService } from '../../node_modules/primeng/api';
 const system={
-name:'',age:'',gender:'',email:'',phone:''
+name:'',age:'',dob:'',gender:'',email:'',phone:''
 }
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ name:'',age:'',gender:'',email:'',phone:''
 })
 export class AppComponent {
   title = 'primeng form';
-  
+  value:Date;
   ccRegex: RegExp = /[0-9]{10}}$/;
   sys=system; 
   constructor(private confirmationService: ConfirmationService) {}

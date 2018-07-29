@@ -13,6 +13,8 @@ import {MessageModule} from 'primeng/message';
 import {CarouselModule} from 'primeng/carousel';
 import {GrowlModule} from 'primeng/growl';
 import { CarouselComponent } from './carousel/carousel.component';
+import {CalendarModule} from 'primeng/calendar';
+import {InputMaskModule} from 'primeng/inputmask';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     MessagesModule,
     CarouselModule,
   GrowlModule,
-    MessageModule
+  InputMaskModule,
+    MessageModule,CalendarModule
   ],
   providers: [ConfirmationService],
   bootstrap: [AppComponent]
