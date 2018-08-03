@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {GrowlModule} from 'primeng/growl';
-import {MessageService} from 'primeng/components/common/messageservice';
+//import {MessageService} from 'primeng/components/common/messageservice';
 import { CarouselComponent } from './carousel.component';
 import {CarouselModule} from 'primeng/carousel';
 describe('CarouselComponent', () => {
@@ -9,7 +9,11 @@ describe('CarouselComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarouselComponent ]
+      declarations: [ CarouselComponent ],
+      imports:[
+        GrowlModule,
+        CarouselModule
+      ]
     })
     .compileComponents();
   }));
@@ -20,9 +24,9 @@ describe('CarouselComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', async(() => {
     expect(component).toBeTruthy();
-  });
+  }));
 
   
 });

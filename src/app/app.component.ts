@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ConfirmationService } from '../../node_modules/primeng/api';
+import {InputMaskModule} from 'primeng/inputmask';
 const system={
 name:'',age:'',dob:'',gender:'',email:'',phone:''
 }

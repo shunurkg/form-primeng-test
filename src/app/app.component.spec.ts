@@ -15,8 +15,10 @@ import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing'
 import { GrowlModule } from 'primeng/growl';
 import { CarouselModule } from 'primeng/carousel';
 import { CarouselComponent } from './carousel/carousel.component';
+import { CalendarModule } from 'primeng/calendar';
+import { InputMaskModule } from 'primeng/inputmask';
 
-fdescribe('AppComponent', () => {
+describe('AppComponent', () => {
 
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
@@ -44,7 +46,9 @@ fdescribe('AppComponent', () => {
         MessagesModule,
         MessageModule,
         GrowlModule,
-        CarouselModule
+        CarouselModule,
+        CalendarModule,
+        InputMaskModule
       ],
       providers: [ConfirmationService]
     }).compileComponents();
